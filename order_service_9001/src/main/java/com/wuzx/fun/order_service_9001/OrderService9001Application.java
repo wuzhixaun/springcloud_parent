@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.ribbon.RibbonClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableDiscoveryClient
 //@RibbonClients(value = {
 //
 //        //@RibbonClient(name = "")
