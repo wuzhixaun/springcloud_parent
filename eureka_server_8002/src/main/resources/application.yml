@@ -1,0 +1,13 @@
+server:
+  port: 8002
+
+eureka:
+  instance:
+    hostname: eureka8002.com
+    instance-id: eureka-server
+
+  client:
+    fetch-registry: false #表示自己就是注册中心，不去检索服务
+    register-with-eureka: false #不像注册中心注册自己
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka/

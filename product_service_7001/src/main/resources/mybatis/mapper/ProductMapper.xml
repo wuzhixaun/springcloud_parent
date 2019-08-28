@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wuzx.fun.product_service_7001.dao.ProductDao">
+
+    <select id="get" resultType="Product" parameterType="INT">
+		select id,name ,price,store,db_sourse from product where id=#{deptno};
+	</select>
+    <select id="list" resultType="Product">
+		select id,name ,price,store,db_sourse from product;
+	</select>
+
+</mapper>
+
+
