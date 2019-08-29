@@ -18,17 +18,18 @@ import java.util.List;
  * @version: 1.0
  **/
 @RestController
+@RequestMapping(value = "/order/feign")
 public class OrderFeignController {
 
     @Autowired
     private ProductService productService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/list")
     public List<Product> list() {
        return productService.list();
     }
 
-    @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/get/{id}")
     public Product get(@PathVariable int id) {
         return productService.get(id);
     }

@@ -1,0 +1,11 @@
+server:
+  port: 9003
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+spring:
+  application:
+    name: order-service-feign

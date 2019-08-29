@@ -1,19 +1,16 @@
 server:
   port: 9001
 
-
 eureka:
   instance:
-    prefer-ip-address: true
+   prefer-ip-address: true
   client:
-    service-url:
-      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+   service-url:
+    defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
 spring:
   application:
-    name: order-server
+   name: order-server
 
-
-#自定义负载均衡策略:
-product-service: #这个就是调用服务名称
+product-service:
   ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
