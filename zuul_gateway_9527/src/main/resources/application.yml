@@ -1,0 +1,21 @@
+server:
+  port: 9527
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/
+spring:
+  application:
+    name: zuul-gateway
+
+zuul:
+  ignored-services: "*"
+  prefix: /wuzx
+  routes:
+    product-service: /product/**
+    order-server: /order/**
+    order-service-feign: /orderfeign/**
+  sensitive-headers:
