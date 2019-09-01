@@ -9,6 +9,12 @@ eureka:
 spring:
   application:
     name: order-service-feign
-
   zipkin:
     base-url: http://www.wuzx.fun:9411
+  sleuth:
+    sampler:
+      probability: 1
+
+ribbon:
+  eureka:
+    enabled: true

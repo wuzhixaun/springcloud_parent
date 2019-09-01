@@ -1,6 +1,7 @@
 package com.wuzx.fun.order_service_feign_9003.cfgbeans;
 
 import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RoundRobinRule;
 import com.netflix.loadbalancer.WeightedResponseTimeRule;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -23,8 +24,4 @@ public class ConfigBean {
         return new RestTemplate();
     }
 
-    @Bean
-    public IRule getMyRule() {
-        return new WeightedResponseTimeRule();
-    }
 }
