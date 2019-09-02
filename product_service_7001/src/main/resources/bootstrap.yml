@@ -1,0 +1,33 @@
+
+spring:
+  application:
+    name: product-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+      label: test
+
+  rabbitmq:
+    host: www.wuzx.fun
+    port: 5672
+    username: guest
+    password: guest
+#暴露所有的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8001.com:8001/eureka/,http://eureka8002.com:8002/eureka/  #  设置注册中心地址
+
+
+
+

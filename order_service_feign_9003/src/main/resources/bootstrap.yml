@@ -1,5 +1,3 @@
-server:
-  port: 9003
 eureka:
   instance:
     prefer-ip-address: true
@@ -9,12 +7,13 @@ eureka:
 spring:
   application:
     name: order-service-feign
-  zipkin:
-    base-url: http://www.wuzx.fun:9411
-  sleuth:
-    sampler:
-      probability: 1
-
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: dev
+      label: master
 ribbon:
   eureka:
     enabled: true
